@@ -6,4 +6,4 @@ Open VSCode, open new terminal, and type ```php artisan serve```, don't forget t
 Change the ```127.0.0.1``` into ```localhost```<br>
 Open new tab and then type ```http://localhost:8000/admin```<br>
 Email address superadmin@admin.com & password superadmin if you import the SQL file and then you can add, edit, or view, delete data.
-Email address orangkeren@sekali.com & password orangkeren if you import the SQL file and then you can add, edit, or view, delete data.
+Email address orangkeren@sekali.com & password orangkeren if you use seeder and then you can add, edit, or view, delete data.
