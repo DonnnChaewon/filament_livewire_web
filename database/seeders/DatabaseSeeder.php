@@ -13,9 +13,9 @@ class DatabaseSeeder extends Seeder {
     // Seed the application's database.
     public function run(): void {
         User::create([
-            'name' => 'Orang Ganteng',
-            'email' => 'orangganteng@banget.com',
-            'password' => Hash::make('orangganteng')
+            'name' => 'Orang Keren',
+            'email' => 'orangkeren@sekali.com',
+            'password' => Hash::make('orangkeren')
         ]);
 
         Category::create([
