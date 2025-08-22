@@ -9,7 +9,7 @@ If you import the SQL file,
 - Email address superadmin@admin.com & password superadmin and then you can add, edit, or view, delete data.
 - Email address akusiapa@siapa.com & password akusiapa and then you can only view data.<br>
 
-If you use seeder, email address orangkeren@sekali.com & password orangkeren and then you can add, edit, or view, delete data.
+If you use seeder, email address orangkeren@sekali.com & password orangkeren and then you can add, edit, or view, delete data.<br>
 
 # Demo Video
 This is the link of the demo video [https://drive.google.com/drive/my-drive?hl=id](https://drive.google.com/file/d/1iJvBYfRVjVUu7tdA_Iwkr7bTsTSkWBaH/view?usp=sharing)
