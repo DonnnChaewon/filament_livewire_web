@@ -9,6 +9,7 @@ use Livewire\Component;
 class ContactUs extends Component {
     public $name = '';
     public $email = '';
+    public $message = '';
 
     protected $rules = [
         'name' => 'required',
@@ -25,10 +26,6 @@ class ContactUs extends Component {
             'email' => $this->email,
             'message' => $this->message
         ];
-
-        Mail::to('superadmin@admin.com')->send(new ContactEmail($mailData));
-
-        session()->flash('success', 'Thank you for contacting us, we will send you a message sooner or later');
 
         $this->redirect('/contactus');
     }

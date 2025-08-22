@@ -21,13 +21,15 @@ class ShowArticles extends Component {
         } else $articles = Article::orderBy('created_at', 'DESC')->where('status', 1)->paginate(4);
 
         $latestArticles = Article::orderBy('created_at', 'DESC')->where('status', 1)->get()->take(4);
+        $lastUpdatedArticles = Article::orderBy('updated_at', 'DESC')->where('status', 1)->get()->take(4);
 
         $categories = Category::all();
 
         return view('livewire.show-articles', [
             'articles' => $articles,
             'categories' => $categories,
-            'latestArticles' => $latestArticles
+            'latestArticles' => $latestArticles,
+            'lastUpdatedArticles' => $lastUpdatedArticles
         ]);
     }
 }

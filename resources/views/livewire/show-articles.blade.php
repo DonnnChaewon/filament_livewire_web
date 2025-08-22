@@ -98,6 +98,34 @@
 							</ul>
 						@endif
 					</div>
+
+					<!-- Last Updated Articles -->
+					<div class="border rounded-lg p-5 bg-white shadow-sm">
+						<h5 class="text-lg font-semibold mb-4 border-b pb-2">Last Updated Articles</h5>
+						@if ($lastUpdatedArticles->isNotEmpty())
+							<ul class="space-y-4">
+								@foreach ($lastUpdatedArticles as $lastUpdatedArticle)
+									<li class="flex items-start gap-4">
+										<a wire:navigate href="{{ route('articleDetail', $lastUpdatedArticle->id) }}" class="flex-shrink-0 w-20 h-16 overflow-hidden rounded">
+											@if ($lastUpdatedArticle->image != '')
+												<img loading="lazy" decoding="async" src="{{ asset('storage/'.$lastUpdatedArticle->image) }}" class="w-full h-full object-cover">
+											@endif
+										</a>
+										<div class="flex-grow">
+											<h6 class="text-sm font-medium text-gray-800 leading-snug">
+												<a wire:navigate href="{{ route('articleDetail', $lastUpdatedArticle->id) }}" class="hover:text-cyan-600">
+													{{ $lastUpdatedArticle->title }}
+												</a>
+											</h6>
+											<small class="text-xs text-gray-500">
+												{{ \Carbon\Carbon::parse($lastUpdatedArticle->updated_at)->format('d M Y') }}
+											</small>
+										</div>
+									</li>
+								@endforeach
+							</ul>
+						@endif
+					</div>
 				</div>
 			</div>
 		</div>

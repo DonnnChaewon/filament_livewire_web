@@ -7,10 +7,11 @@
                     <div class="mb-8">
                         <h2 class="text-3xl font-bold mb-4 leading-snug">{{ $article->title }}</h2>
                         <div class="text-gray-600 text-sm flex flex-wrap items-center mb-2">
-                            <span>{{ \Carbon\Carbon::parse($article->created_at)->format('d M Y') }}</span>
-                            <span class="mx-2">/</span>
-                            <span>Category:
-                                {{ $article->category_name }}
+                            <span>Created at: {{ \Carbon\Carbon::parse($article->created_at)->format('d M Y') }}</span>
+                            <span class="mx-2">|</span>
+                            <span>Last updated: {{ \Carbon\Carbon::parse($article->updated_at)->format('d M Y') }}</span>
+                            <span class="mx-2">|</span>
+                            <span>Category: {{ $article->category_name }}
                             </span>
                         </div>
                     </div>
