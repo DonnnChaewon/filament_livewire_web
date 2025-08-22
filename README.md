@@ -5,5 +5,7 @@ Don't forget to import the database file named ```filament_livewire_web.sql``` t
 Open VSCode, open new terminal, and type ```php artisan serve```, don't forget to CTRL + click the ```[http://127.0.0.1:8000]```<br>
 Change the ```127.0.0.1``` into ```localhost```<br>
 Open new tab and then type ```http://localhost:8000/admin```<br>
-Email address superadmin@admin.com & password superadmin if you import the SQL file and then you can add, edit, or view, delete data.
-Email address orangkeren@sekali.com & password orangkeren if you use seeder and then you can add, edit, or view, delete data.
+If you import the SQL file, 
+- Email address superadmin@admin.com & password superadmin and then you can add, edit, or view, delete data.
+- Email address akusiapa@siapa.com & password akusiapa and then you can only view data.
+If you use seeder, email address orangkeren@sekali.com & password orangkeren and then you can add, edit, or view, delete data.
