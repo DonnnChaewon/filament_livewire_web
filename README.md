@@ -8,4 +8,5 @@ Open new tab and then type ```http://localhost:8000/admin```<br>
 If you import the SQL file, 
 - Email address superadmin@admin.com & password superadmin and then you can add, edit, or view, delete data.
 - Email address akusiapa@siapa.com & password akusiapa and then you can only view data.<br>
+
 If you use seeder, email address orangkeren@sekali.com & password orangkeren and then you can add, edit, or view, delete data.
