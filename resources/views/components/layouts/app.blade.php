@@ -10,6 +10,7 @@
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 
     <!-- Custom Style -->
     <link rel="stylesheet" href="{{ asset('/front/css/style.css') }}">

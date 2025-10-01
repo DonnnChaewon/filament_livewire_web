@@ -9,6 +9,7 @@ use App\Livewire\AboutUs;
 use App\Livewire\TermsConditions;
 use App\Livewire\PrivacyPolicy;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,6 @@ Route::get('/contactus', ContactUs::class)->name('contactus');
 Route::get('/aboutus', AboutUs::class)->name('aboutus');
 Route::get('/termsconditions', TermsConditions::class)->name('termsconditions');
 Route::get('/privacypolicy', PrivacyPolicy::class)->name('privacypolicy');
+Route::post('/articles/{id}/comments', [CommentController::class, 'store'])->name('comments.store');
+Route::put('/comments/{comment}', [CommentController::class, 'update'])->name('comments.update');
+Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
