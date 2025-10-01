@@ -13,4 +13,6 @@ If you use seeder, email address orangkeren@sekali.com & password orangkeren and
 
 
 # Demo Video
-This is the link of the demo video [https://drive.google.com/drive/my-drive?hl=id](https://drive.google.com/file/d/1iJvBYfRVjVUu7tdA_Iwkr7bTsTSkWBaH/view?usp=sharing)
+Video demo links<br>
+- General (without comment section): [https://drive.google.com/drive/my-drive?hl=id](https://drive.google.com/file/d/1iJvBYfRVjVUu7tdA_Iwkr7bTsTSkWBaH/view?usp=sharing)<br>
+- Comment section: [https://drive.google.com/drive/my-drive?hl=id](https://drive.google.com/file/d/1ButsszG_Wr4qqTzbTMr4BI3A4nUY-GDQ/view?usp=sharing)
