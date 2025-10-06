@@ -10,6 +10,7 @@ use App\Livewire\TermsConditions;
 use App\Livewire\PrivacyPolicy;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ReplyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,6 @@ Route::get('/privacypolicy', PrivacyPolicy::class)->name('privacypolicy');
 Route::post('/articles/{id}/comments', [CommentController::class, 'store'])->name('comments.store');
 Route::put('/comments/{comment}', [CommentController::class, 'update'])->name('comments.update');
 Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
+Route::post('/comments/{comment}/replies', [ReplyController::class, 'store'])->name('replies.store');
+Route::put('/replies/{reply}', [ReplyController::class, 'update'])->name('replies.update');
+Route::delete('/replies/{reply}', [ReplyController::class, 'destroy'])->name('replies.destroy');
