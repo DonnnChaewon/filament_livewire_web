@@ -33,22 +33,43 @@
 												{{ \Carbon\Carbon::parse($article->created_at)->format('d M Y') }}
 											</p>
 											<h2 class="text-lg font-semibold text-gray-800 mb-2">
-												<a class="hover:text-cyan-600" href="{{ route('articleDetail', $article->id) }}">
+												<a class="hover:text-cyan-500" href="{{ route('articleDetail', $article->id) }}">
 													{{ $article->title }}
 												</a>
 											</h2>
-											<a wire:navigate href="{{ route('articleDetail', $article->id) }}" class="text-cyan-600 font-medium hover:underline" aria-label="Read the full article by clicking here">
-												Read More
-											</a>
+											<a wire:navigate href="{{ route('articleDetail', $article->id) }}" class="text-cyan-600 font-medium hover:underline">Read More</a>
 										</div>
 									</article>
 								</div>
 							@endforeach
 						@endif
 
-						<!-- Pagination -->
-						<div class="col-span-full">
-							{{ $articles->links() }}
+						<!-- Custom Pagination -->
+						<div class="col-span-full flex justify-center mt-12">
+							<div class="inline-flex items-center space-x-2">
+								{{-- Previous Page Link --}}
+								@if ($articles->onFirstPage())
+									<span class="px-6 py-4 bg-gray-200 text-gray-400 rounded-md cursor-not-allowed">←</span>
+								@else
+									<a href="{{ $articles->previousPageUrl() }}" class="px-6 py-4 bg-cyan-100 text-cyan-600 rounded-md hover:bg-cyan-200 transition">←</a>
+								@endif
+
+								{{-- Pagination Elements --}}
+								@foreach ($articles->getUrlRange(1, $articles->lastPage()) as $page => $url)
+									@if ($page == $articles->currentPage())
+										<span class="px-6 py-4 bg-cyan-600 text-white rounded-md">{{ $page }}</span>
+									@else
+										<a href="{{ $url }}" class="px-6 py-4 bg-cyan-100 text-cyan-600 rounded-md hover:bg-cyan-200 transition">{{ $page }}</a>
+									@endif
+								@endforeach
+
+								{{-- Next Page Link --}}
+								@if ($articles->hasMorePages())
+									<a href="{{ $articles->nextPageUrl() }}" class="px-6 py-4 bg-cyan-100 text-cyan-600 rounded-md hover:bg-cyan-200 transition">→</a>
+								@else
+									<span class="px-6 py-4 bg-gray-200 text-gray-400 rounded-md cursor-not-allowed">→</span>
+								@endif
+							</div>
 						</div>
 					</div>
 				</div>
@@ -62,7 +83,7 @@
 							@if ($categories->isNotEmpty())
 								@foreach ($categories as $category)
 									<li>
-										<a wire:navigate href="{{ route('articles').'?categorySlug='.$category->slug }}" class="text-gray-700 hover:text-cyan-600 transition">
+										<a wire:navigate href="{{ route('articles').'?categorySlug='.$category->slug }}" class="text-gray-700 hover:text-cyan-500 transition">
 											{{ $category->name }}
 										</a>
 									</li>
@@ -85,7 +106,7 @@
 										</a>
 										<div class="flex-grow">
 											<h6 class="text-sm font-medium text-gray-800 leading-snug">
-												<a wire:navigate href="{{ route('articleDetail', $latestArticle->id) }}" class="hover:text-cyan-600">
+												<a wire:navigate href="{{ route('articleDetail', $latestArticle->id) }}" class="hover:text-cyan-500">
 													{{ $latestArticle->title }}
 												</a>
 											</h6>
@@ -113,7 +134,7 @@
 										</a>
 										<div class="flex-grow">
 											<h6 class="text-sm font-medium text-gray-800 leading-snug">
-												<a wire:navigate href="{{ route('articleDetail', $lastUpdatedArticle->id) }}" class="hover:text-cyan-600">
+												<a wire:navigate href="{{ route('articleDetail', $lastUpdatedArticle->id) }}" class="hover:text-cyan-500">
 													{{ $lastUpdatedArticle->title }}
 												</a>
 											</h6>
