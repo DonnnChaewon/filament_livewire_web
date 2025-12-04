@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{ $title ?? 'Filament & Livewire Web' }}</title>
+    <title>{{ $title ?? 'ArticleNation' }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <meta name="description" content="This is meta description">
     <meta name="author" content="Themefisher">
@@ -12,9 +12,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
 
-    <!-- Custom Style -->
-    <link rel="stylesheet" href="{{ asset('/front/css/style.css') }}">
-    @livewireStyles
+    <style>
+        figcaption.attachment__caption {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            line-height: 0 !important;
+        }
+    </style>
 </head>
 
 <body class="font-sans antialiased">
@@ -89,13 +96,6 @@
             navMenu.classList.toggle('hidden');
         });
     </script>
-
-    <!-- jQuery Plugin (optional, if still needed for other scripts) -->
-    <script src="{{ asset('/front/plugins/jquery/jquery.min.js') }}"></script>
-
-    <!-- Other Scripts -->
-    <script src="{{ asset('/front/js/script.js') }}"></script>
-    @livewireScripts
 </body>
 
 </html>

@@ -25,7 +25,9 @@
 									<article class="border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition">
 										@if ($article->image != '')
 											<div class="overflow-hidden">
-												<img loading="lazy" decoding="async" src="{{ asset('storage/'.$article->image) }}" class="w-full h-60 object-cover">
+												<a wire:navigate href="{{ route('articleDetail', $article->id) }}">
+													<img loading="lazy" decoding="async" src="{{ asset('storage/'.$article->image) }}" class="w-full h-60 object-cover">
+												</a>
 											</div>
 										@endif
 										<div class="p-5">

@@ -21,10 +21,10 @@
 					<!-- Left Column - Form -->
 					<div>
 						<h4 class="text-lg font-semibold mb-6">Leave us a Message</h4>
-						<form wire:submit="submit">
+						<form wire:submit.prevent="submit" wire:key="contact-form-{{ $formId }}">
 							<div class="mb-5">
 								<label for="name" class="block mb-2 font-medium">Full Name</label>
-								<input wire:model="name" type="text" id="name" name="name" class="w-full border border-gray-300 rounded px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 @error('name') border-red-500 @enderror">
+								<input autocomplete="off" wire:model="name" type="text" id="name" name="name" class="w-full border border-gray-300 rounded px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 @error('name') border-red-500 @enderror">
 								@error('name')
 									<p class="text-red-500 text-sm mt-1">{{ $message }}</p>
 								@enderror
@@ -32,7 +32,7 @@
 
 							<div class="mb-5">
 								<label for="email" class="block mb-2 font-medium">Email Address</label>
-								<input wire:model="email" type="email" id="email" name="email" class="w-full border border-gray-300 rounded px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 @error('email') border-red-500 @enderror">
+								<input autocomplete="off" wire:model="email" type="email" id="email" name="email" class="w-full border border-gray-300 rounded px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 @error('email') border-red-500 @enderror">
 								@error('email')
 									<p class="text-red-500 text-sm mt-1">{{ $message }}</p>
 								@enderror
@@ -40,7 +40,7 @@
 
 							<div class="mb-5">
 								<label for="message" class="block mb-2 font-medium">Message</label>
-								<textarea wire:model="message" id="message" name="message" rows="4" class="w-full border border-gray-300 rounded px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+								<textarea autocomplete="off" wire:model="message" id="message" name="message" rows="4" class="w-full border border-gray-300 rounded px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
 							</div>
 
 							<button type="submit" class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition duration-200">
@@ -52,10 +52,10 @@
 					<!-- Right Column - Contact Info -->
 					<div class="mt-10 lg:mt-0 space-y-8">
 						<div>
-							<h4 class="text-lg font-semibold mb-2">Still Have Questions?</h4>
-							<p class="text-gray-700">Call Us We Will Be Happy To Help</p>
+							<h4 class="text-lg font-semibold mb-2">Still have questions? Call us!</h4>
+							<p class="text-gray-700">We wll be happy to help.</p>
 							<p class="text-gray-700 block mt-1">+1 1234567890</p>
-							<p class="text-gray-600 mt-1">Everyday<br>Everytime</p>
+							<p class="text-gray-600 mt-1">Everyday<br>08:00 - 23:00</p>
 						</div>
 						<div>
 							<h4 class="text-lg font-semibold mb-2">White House</h4>

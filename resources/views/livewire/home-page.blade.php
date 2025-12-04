@@ -40,7 +40,7 @@
                 <!-- Section Closing -->
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="pt-4">
-                        <h1 class="text-3xl font-bold text-black mb-2">See more articles?</h1>
+                        <h1 class="text-3xl font-bold text-black mb-2">Explore more articles?</h1>
                         <p class="text-gray-700">Go to the blue button above and then click it.</p>
                     </div>
                 </div>

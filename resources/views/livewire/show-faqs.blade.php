@@ -19,7 +19,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </button>
-                                <div id="faq-{{ $x }}" class="hidden px-6 pb-4 text-gray-700 faq-answer">
+                                <div id="faq-{{ $x }}" class="hidden px-6 pt-4 pb-4 text-gray-700 faq-answer">
                                     {!! $faq->answer !!}
                                 </div>
                             </div>
